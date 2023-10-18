@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git credentialsId: 'javahome2', url: 'https://github.com/srinicloud87/myweb.git'
+                git credentialsId: 'javahome2', url: 'https://https://github.com/Raghumast/myweb-sonar.git'
             }
         }
         stage("Maven Build"){
@@ -31,11 +31,11 @@ pipeline{
                   ], 
                   credentialsId: 'nexus3', 
                   groupId: 'in.javahome', 
-                  nexusUrl: '172.31.3.240:8081', 
+                  nexusUrl: '54.90.79.82:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
                   repository: 'sample-releases', 
-                  version: '8.2.0'  
+                  version: '3.31.0'  
               }
             }
         stage('Build Docker Image'){
